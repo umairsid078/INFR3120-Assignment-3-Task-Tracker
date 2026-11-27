@@ -1,3 +1,6 @@
+require('dotenv').config();
+var mongoose = require('mongoose');
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -39,3 +42,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.log(err));
