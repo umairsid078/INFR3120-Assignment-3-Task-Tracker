@@ -1,11 +1,44 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('partials/header') %>
+
+<main>
+
+    <!-- Welcome section -->
+    <section class="welcome">
+        <h1>Welcome to My Task Tracker</h1>
+        <p>Keep track of your daily tasks and stay organized.</p>
+        <a href="/tasks" class="btn btn-primary">View Tasks</a>
+    </section>
+
+    <!-- Website features -->
+    <section class="container features">
+        <h2 class="text-center mb-4">What can you do?</h2>
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <h3>Create Tasks</h3>
+                    <p>Add new tasks to your list.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <h3>Manage Tasks</h3>
+                    <p>Edit or remove existing tasks.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <h3>Track Progress</h3>
+                    <p>Keep track of completed tasks.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<%- include('partials/footer') %>
